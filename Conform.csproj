@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{489CD65E-1044-4176-BD92-FC2B9FDDAC80}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Conform</RootNamespace>
+    <AssemblyName>Conform</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="sfmlnet-audio-2">
+      <HintPath>..\..\..\..\..\Desktop\DevFold\External Libraries\SFML.Net-2.1\lib\sfmlnet-audio-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-graphics-2">
+      <HintPath>..\..\..\..\..\Desktop\DevFold\External Libraries\SFML.Net-2.1\lib\sfmlnet-graphics-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-window-2">
+      <HintPath>..\..\..\..\..\Desktop\DevFold\External Libraries\SFML.Net-2.1\lib\sfmlnet-window-2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Box2CS\Body\Body.cs" />
+    <Compile Include="Box2CS\Body\Fixture.cs" />
+    <Compile Include="Box2CS\Box2D\Globals.cs" />
+    <Compile Include="Box2CS\Box2D\Helpers.cs" />
+    <Compile Include="Box2CS\Box2D\Math.cs" />
+    <Compile Include="Box2CS\Box2D\Settings.cs" />
+    <Compile Include="Box2CS\Box2D\UserData.cs" />
+    <Compile Include="Box2CS\Box2D\Version.cs" />
+    <Compile Include="Box2CS\Box2D\XMLFragmentParser.cs" />
+    <Compile Include="Box2CS\Contacts\Contact.cs" />
+    <Compile Include="Box2CS\Contacts\ContactEdge.cs" />
+    <Compile Include="Box2CS\Contacts\ContactFilter.cs" />
+    <Compile Include="Box2CS\Contacts\ContactListener.cs" />
+    <Compile Include="Box2CS\Joints\DistanceJoint.cs" />
+    <Compile Include="Box2CS\Joints\FrictionJoint.cs" />
+    <Compile Include="Box2CS\Joints\GearJoint.cs" />
+    <Compile Include="Box2CS\Joints\Joint.cs" />
+    <Compile Include="Box2CS\Joints\JointEdge.cs" />
+    <Compile Include="Box2CS\Joints\LineJoint.cs" />
+    <Compile Include="Box2CS\Joints\MouseJoint.cs" />
+    <Compile Include="Box2CS\Joints\PrismaticJoint.cs" />
+    <Compile Include="Box2CS\Joints\PulleyJoint.cs" />
+    <Compile Include="Box2CS\Joints\RevoluteJoint.cs" />
+    <Compile Include="Box2CS\Joints\WeldJoint.cs" />
+    <Compile Include="Box2CS\Serialize\Serialize.cs" />
+    <Compile Include="Box2CS\Shapes\CircleShape.cs" />
+    <Compile Include="Box2CS\Shapes\EdgeChain.cs" />
+    <Compile Include="Box2CS\Shapes\MeshShape.cs" />
+    <Compile Include="Box2CS\Shapes\PolygonShape.cs" />
+    <Compile Include="Box2CS\Shapes\Shape.cs" />
+    <Compile Include="Box2CS\World\DebugDraw.cs" />
+    <Compile Include="Box2CS\World\DestructionListener.cs" />
+    <Compile Include="Box2CS\World\QueryCallback.cs" />
+    <Compile Include="Box2CS\World\RayCast.cs" />
+    <Compile Include="Box2CS\World\RayCastCallback.cs" />
+    <Compile Include="Box2CS\World\World.cs" />
+    <Compile Include="Input\Command.cs" />
+    <Compile Include="Input\Event.cs" />
+    <Compile Include="Input\Player.cs" />
+    <Compile Include="Management\World.cs" />
+    <Compile Include="Node\SceneNode.cs" />
+    <Compile Include="Node\ShapeEntity.cs" />
+    <Compile Include="State\GameState.cs" />
+    <Compile Include="State\MenuState.cs" />
+    <Compile Include="State\PauseState.cs" />
+    <Compile Include="State\State.cs" />
+    <Compile Include="State\StateStack.cs" />
+    <Compile Include="State\TitleState.cs" />
+    <Compile Include="Utility\Clock.cs" />
+    <Compile Include="Management\Application.cs" />
+    <Compile Include="Management\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\ResourceHolder.cs" />
+    <Compile Include="Utility\Time.cs" />
+    <Compile Include="Utility\UnitConverter.cs" />
+    <Compile Include="Utility\Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Box2C\Box2C.vcxproj" />
+    <None Include="Box2C\Box2C.vcxproj.filters" />
+    <None Include="Box2C\Box2C.vcxproj.vs10x" />
+    <None Include="Box2C\Library\Debug\Box2D.lib" />
+    <None Include="Box2C\Library\Release\Box2D.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Box2C.dll" />
+    <Content Include="Box2CS.dll" />
+    <Content Include="Box2CS\bin\Debug\Box2CS.dll" />
+    <Content Include="Box2CS\bin\Debug\Box2DCS.dll" />
+    <Content Include="Box2CS\bin\Debug\Box2DCS.pdb" />
+    <Content Include="Box2CS\bin\Release\Box2CS.dll" />
+    <Content Include="Box2CS\Box2CS.csproj" />
+    <Content Include="Box2C\Box2C.cpp" />
+    <Content Include="Box2C\Box2C.h" />
+    <Content Include="Box2C\dllmain.cpp" />
+    <Content Include="Box2C\mod.def" />
+    <Content Include="Box2C\stdafx.cpp" />
+    <Content Include="Box2C\stdafx.h" />
+    <Content Include="Box2C\targetver.h" />
+    <Content Include="Box2DCS.dll" />
+    <Content Include="csfml-audio-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="csfml-graphics-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="csfml-window-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libsndfile-1.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="openal32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Box2CS\Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
